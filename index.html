@@ -113,7 +113,7 @@
               <div>
                 <h3>Resident DJ</h3>
                 <p class="gig-place">Valiant Lady · Virgin Voyages</p>
-                <p class="gig-note">The whole season. Caribbean calls include Aruba, Curaçao, Barbados and St. Lucia.</p>
+                <p class="gig-note">Departs San Juan, Puerto Rico, on 5 December. Caribbean calls include Aruba, Curaçao, Barbados and St. Lucia.</p>
               </div>
             </div>
           </li>
@@ -151,6 +151,9 @@
             <li>Bonaire</li>
           </ul>
         </div>
+        <p class="itinerary-open">
+          <button type="button" class="btn btn-line" id="open-itinerary" aria-haspopup="dialog" aria-controls="itinerary">Full itinerary · every port</button>
+        </p>
       </div>
     </section>
 
@@ -327,6 +330,85 @@
       </nav>
     </div>
   </footer>
+  <div class="modal" id="itinerary" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-frame double" role="dialog" aria-modal="true" aria-labelledby="itinerary-title">
+      <div class="double-inner modal-panel">
+        <div class="modal-head">
+          <button type="button" class="modal-close" data-close>Close</button>
+          <p class="eyebrow">Valiant Lady</p>
+          <h2 class="modal-title" id="itinerary-title">Every port</h2>
+          <p class="accent">From San Juan, through the islands, and home.</p>
+        </div>
+        <div class="modal-scroll">
+          <h3 class="month-label">December 2026</h3>
+          <ul class="ports">
+            <li class="port"><span class="port-date">5 Dec</span><span class="port-name">Departing from San Juan, Puerto Rico</span></li>
+            <li class="port"><span class="port-date">7 Dec</span><span class="port-name">Oranjestad, Aruba</span></li>
+            <li class="port"><span class="port-date">8 Dec</span><span class="port-name">Willemstad, Curaçao</span></li>
+            <li class="port"><span class="port-date">10 Dec</span><span class="port-name">Fort-de-France, Martinique</span></li>
+            <li class="port"><span class="port-date">11 Dec</span><span class="port-name">Basseterre, St. Kitts</span></li>
+            <li class="port"><span class="port-date">13 Dec</span><span class="port-name">Philipsburg, St. Maarten</span></li>
+            <li class="port"><span class="port-date">15 Dec</span><span class="port-name">Bridgetown, Barbados</span></li>
+            <li class="port"><span class="port-date">16 Dec</span><span class="port-name">Castries, St. Lucia</span></li>
+            <li class="port"><span class="port-date">17 Dec</span><span class="port-name">Fort-de-France, Martinique</span></li>
+            <li class="port"><span class="port-date">18 Dec</span><span class="port-name">Basseterre, St. Kitts</span></li>
+            <li class="port"><span class="port-date">20 Dec</span><span class="port-name">Basseterre, St. Kitts</span></li>
+            <li class="port"><span class="port-date">21 Dec</span><span class="port-name">Fort-de-France, Martinique</span></li>
+            <li class="port"><span class="port-date">23 Dec</span><span class="port-name">Oranjestad, Aruba</span></li>
+            <li class="port"><span class="port-date">24 Dec</span><span class="port-name">Willemstad, Curaçao</span></li>
+            <li class="port"><span class="port-date">27 Dec</span><span class="port-name">Philipsburg, St. Maarten</span></li>
+            <li class="port"><span class="port-date">28 Dec</span><span class="port-name">Fort-de-France, Martinique</span></li>
+            <li class="port"><span class="port-date">29 Dec</span><span class="port-name">Bridgetown, Barbados</span></li>
+            <li class="port"><span class="port-date">30 Dec</span><span class="port-name">Castries, St. Lucia</span></li>
+            <li class="port is-highlight">
+              <div class="port-core">
+                <span class="port-date">31 Dec</span>
+                <span class="port-name">St. John’s, Antigua</span>
+                <span class="port-flag">Double New Year’s Eve</span>
+              </div>
+            </li>
+          </ul>
+          <h3 class="month-label">January 2027</h3>
+          <ul class="ports">
+            <li class="port"><span class="port-date">3 Jan</span><span class="port-name">Tortola, BVI</span></li>
+            <li class="port"><span class="port-date">5 Jan</span><span class="port-name">Bridgetown, Barbados</span></li>
+            <li class="port"><span class="port-date">6 Jan</span><span class="port-name">Castries, St. Lucia</span></li>
+            <li class="port"><span class="port-date">7 Jan</span><span class="port-name">St. John’s, Antigua</span></li>
+            <li class="port"><span class="port-date">8 Jan</span><span class="port-name">Philipsburg, St. Maarten</span></li>
+            <li class="port"><span class="port-date">11 Jan</span><span class="port-name">Oranjestad, Aruba</span></li>
+            <li class="port"><span class="port-date">12 Jan</span><span class="port-name">Willemstad, Curaçao</span></li>
+            <li class="port"><span class="port-date">14 Jan</span><span class="port-name">Fort-de-France, Martinique</span></li>
+            <li class="port"><span class="port-date">15 Jan</span><span class="port-name">Basseterre, St. Kitts</span></li>
+            <li class="port"><span class="port-date">17 Jan</span><span class="port-name">Philipsburg, St. Maarten</span></li>
+            <li class="port"><span class="port-date">19 Jan</span><span class="port-name">Bridgetown, Barbados</span></li>
+            <li class="port"><span class="port-date">20 Jan</span><span class="port-name">Castries, St. Lucia</span></li>
+            <li class="port"><span class="port-date">21 Jan</span><span class="port-name">Fort-de-France, Martinique</span></li>
+            <li class="port"><span class="port-date">22 Jan</span><span class="port-name">Basseterre, St. Kitts</span></li>
+            <li class="port"><span class="port-date">24 Jan</span><span class="port-name">Tortola, BVI</span></li>
+            <li class="port"><span class="port-date">25 Jan</span><span class="port-name">Basseterre, St. Kitts</span></li>
+            <li class="port"><span class="port-date">26 Jan</span><span class="port-name">St. John’s, Antigua</span></li>
+            <li class="port"><span class="port-date">27 Jan</span><span class="port-name">Castries, St. Lucia</span></li>
+            <li class="port"><span class="port-date">31 Jan</span><span class="port-name">Oranjestad, Aruba</span></li>
+          </ul>
+          <h3 class="month-label">February 2027</h3>
+          <ul class="ports">
+            <li class="port"><span class="port-date">1 Feb</span><span class="port-name">Willemstad, Curaçao</span></li>
+            <li class="port is-highlight">
+              <div class="port-core">
+                <span class="port-date">2 Feb</span>
+                <span class="port-name">Kralendijk, Bonaire</span>
+                <span class="port-flag">Home</span>
+              </div>
+            </li>
+            <li class="port"><span class="port-date">4 Feb</span><span class="port-name">Fort-de-France, Martinique</span></li>
+            <li class="port"><span class="port-date">5 Feb</span><span class="port-name">Philipsburg, St. Maarten</span></li>
+          </ul>
+        </div>
+        <p class="modal-foot">Itinerary subject to change.</p>
+      </div>
+    </div>
+  </div>
   <script src="js/site.js"></script>
 </body>
 </html>
