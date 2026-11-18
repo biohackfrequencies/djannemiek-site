@@ -720,6 +720,26 @@ details.long-bio .prose {
   color: var(--gold);
 }
 
+button.btn {
+  font-family: var(--sans);
+  cursor: pointer;
+}
+
+.btn.btn-line {
+  background: transparent;
+  color: var(--gold);
+}
+
+.btn.btn-line:hover,
+.btn.btn-line:focus-visible {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.itinerary-open {
+  margin: 28px 0 0;
+}
+
 .fine {
   font-size: 0.92rem;
   max-width: 46ch;
@@ -896,6 +916,168 @@ details.long-bio .prose {
   .book-panel {
     padding: 56px 48px;
   }
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.modal-frame {
+  position: relative;
+  z-index: 1;
+  width: min(640px, 100%);
+  max-height: calc(100svh - 32px);
+}
+
+.modal-panel {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100svh - 48px);
+  background: var(--ink);
+  min-height: 0;
+}
+
+.modal-head {
+  position: relative;
+  padding: 22px 56px 8px 20px;
+}
+
+.modal-title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(2.4rem, 9vw, 3.5rem);
+  line-height: 0.9;
+  letter-spacing: 0.03em;
+  margin: 0.1em 0 0.2em;
+  color: var(--cream);
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--gold);
+  background: transparent;
+  color: var(--gold);
+  font-family: var(--sans);
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus-visible {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.modal-scroll {
+  overflow: auto;
+  padding: 4px 18px 16px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.month-label {
+  margin: 1.35rem 0 0.35rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.ports {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.port {
+  display: grid;
+  grid-template-columns: 4.6rem 1fr;
+  gap: 4px 12px;
+  align-items: baseline;
+  padding: 9px 0;
+  border-top: 1px solid var(--gold-line);
+}
+
+.port-date {
+  font-family: var(--display);
+  font-size: 1.45rem;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  color: var(--gold);
+}
+
+.port-name {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.35;
+}
+
+.port.is-highlight {
+  display: block;
+  margin: 10px 0;
+  padding: 6px;
+  border: 1px solid var(--gold);
+}
+
+.port-core {
+  display: grid;
+  grid-template-columns: 4.6rem 1fr;
+  gap: 4px 12px;
+  align-items: baseline;
+  padding: 10px 10px 12px;
+  border: 1px solid var(--gold);
+}
+
+.port-flag {
+  grid-column: 2;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.15rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--gold);
+  line-height: 1.2;
+}
+
+.modal-foot {
+  margin: 0;
+  padding: 12px 18px 16px;
+  border-top: 1px solid var(--gold-line);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
 }
 
 @media (prefers-reduced-motion: reduce) {
