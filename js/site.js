@@ -19,3 +19,59 @@ const BOOKING_EMAIL = 'booking@djannemiek.com';
     labels[j].textContent = BOOKING_EMAIL;
   }
 })();
+
+(function () {
+  var dialog = document.getElementById('itinerary');
+  var openBtn = document.getElementById('open-itinerary');
+  if (!dialog || !openBtn) return;
+
+  var lastFocus = null;
+
+  function focusable() {
+    return Array.prototype.slice.call(dialog.querySelectorAll('button, [href], [tabindex]:not([tabindex="-1"])')).filter(function (el) {
+      return !el.hasAttribute('disabled') && el.getAttribute('aria-hidden') !== 'true';
+    });
+  }
+
+  function openDialog() {
+    lastFocus = document.activeElement;
+    dialog.hidden = false;
+    document.body.classList.add('modal-open');
+    var closeBtn = dialog.querySelector('.modal-close');
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeDialog() {
+    if (dialog.hidden) return;
+    dialog.hidden = true;
+    document.body.classList.remove('modal-open');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  openBtn.addEventListener('click', openDialog);
+
+  dialog.addEventListener('click', function (event) {
+    if (event.target.closest('[data-close]')) closeDialog();
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (dialog.hidden) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeDialog();
+      return;
+    }
+    if (event.key !== 'Tab') return;
+    var items = focusable();
+    if (!items.length) return;
+    var first = items[0];
+    var last = items[items.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+})();
